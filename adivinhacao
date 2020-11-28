@@ -9,9 +9,16 @@ chute_str = input("Digite o seu número: ")
 print("Você digitou ", chute_str)
 chute = int(chute_str)
 
-if (numero_secreto == chute):
+acertou = chute == numero_secreto
+acima   = chute > numero_secreto
+abaixo  = chute < numero_secreto
+
+if (acertou):
     print("Você acertou!")
 else:
-    print("Você errou...")
+    if(acima):
+        print("Seu chute foi acima do número certo..")
+    elif(abaixo):
+        print("Seu chute foi abaixo do número certo..")
 
 print("Fim do jogo")
