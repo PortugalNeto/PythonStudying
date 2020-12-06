@@ -1,0 +1,29 @@
+import random
+def jogar():
+    print("***************************")
+    print("Bem vindo ao jogo de Forca!")
+    print("***************************\n")
+
+    palavra_secreta = "banana"
+    comprimento = len(palavra_secreta)
+    enforcou = False
+    acertou = False
+    print("A palavra secreta tem", comprimento, "letras!")
+
+    while(not acertou and not enforcou):
+        print("Jogando...")
+        chute = input("Chute uma letra: ").lower().strip()
+        index = 1
+        for letra in palavra_secreta:
+            if (chute == letra):
+                print("Há a letra {} na posição {}".format(chute, index))
+            index += 1
+
+
+
+
+
+    print("Fim do Jogo!")
+
+if (__name__ == "__main__"):
+    jogar()
