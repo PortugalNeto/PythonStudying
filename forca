@@ -1,15 +1,14 @@
 def jogar():
-
     import random
-    
-    
+
     print("***************************")
     print("Bem vindo ao jogo de Forca!")
     print("***************************\n")
 
-    palavra_secreta = "banana".lower()
+    palavra_secreta = "bebado".lower()
+    letras_acertadas = ["_" for letra in palavra_secreta]
 
-    letras_acertadas = ["_", "_", "_", "_", "_", "_"]
+
     comprimento = len(palavra_secreta)
     print("A palavra secreta tem", comprimento, "letras!")
     print(letras_acertadas)
@@ -17,7 +16,7 @@ def jogar():
     acertou = False
     tentativas = 0
 
-    while(not acertou and not enforcou):
+    while (not acertou and not enforcou):
 
         print("Jogando...")
         chute = input("Chute uma letra: ").lower().strip()
@@ -33,17 +32,17 @@ def jogar():
         enforcou = tentativas == 6
         acertou = "_" not in letras_acertadas
 
-        if(acertou):
+        if (acertou):
             print("Parabéns, você acertou!")
-        elif(enforcou):
-            print("Você foi enforcado =/")
+            break
+        elif (enforcou):
+            print("Você foi enforcado. A palavra era {}.".format(palavra_secreta))
+            break
 
         print("Você ainda tem", 6 - tentativas, "tentativas para acertar a palavra.")
 
-
-
-
     print("Fim do Jogo!")
+
 
 if (__name__ == "__main__"):
     jogar()
