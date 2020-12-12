@@ -13,7 +13,7 @@ def jogar():
     arquivo.close()
     print(palavra)
 
-    palavra_secreta = palavra[random.randrange(0,5)]
+    palavra_secreta = palavra[random.randrange(0,6)]
     letras_acertadas = ["_" for letra in palavra_secreta]
 
 
