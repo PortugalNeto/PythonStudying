@@ -16,4 +16,4 @@ class Conta:
         self.saldo += valor
 
     def saca(self, valor):
-        self.saldo -= va
+        self.saldo -= valor
